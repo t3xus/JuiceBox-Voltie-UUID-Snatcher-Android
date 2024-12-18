@@ -1,3 +1,4 @@
+// MainActivity.kt
 package com.voltiegroup.uuidsnatcher
 
 import android.Manifest
@@ -9,6 +10,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import okhttp3.OkHttpClient
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var wifiManager: WifiManager
     private lateinit var listView: ListView
     private val processedAPs = mutableSetOf<String>()
+    private val uuidHistory = mutableListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +85,12 @@ class MainActivity : AppCompatActivity() {
             if (response.isSuccessful) {
                 val responseBody = response.body?.string()
                 val uuid = JSONObject(responseBody ?: "{}").optString("uuid")
-                sendEmail(uuid)
+                if (uuid.isNotEmpty()) {
+                    uuidHistory.add(uuid)
+                    sendEmail(uuid)
+                } else {
+                    Toast.makeText(this, "Invalid UUID fetched", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Log.e("UUID_FETCH", "Failed to fetch UUID")
             }
@@ -98,6 +106,28 @@ class MainActivity : AppCompatActivity() {
 
         if (emailIntent.resolveActivity(packageManager) != null) {
             startActivity(emailIntent)
+        }
+    }
+
+    private fun exportUUIDsToFile() {
+        val filename = "uuid_history.txt"
+        val fileContents = uuidHistory.joinToString(separator = "\n")
+
+        openFileOutput(filename, Context.MODE_PRIVATE).use {
+            it.write(fileContents.toByteArray())
+        }
+
+        Toast.makeText(this, "UUID history exported to $filename", Toast.LENGTH_LONG).show()
+    }
+
+    private fun showUUIDHistory() {
+        if (uuidHistory.isEmpty()) {
+            Toast.makeText(this, "No UUIDs found in history", Toast.LENGTH_SHORT).show()
+        } else {
+            uuidHistory.forEach { uuid ->
+                Log.d("UUID_HISTORY", uuid)
+            }
+            Toast.makeText(this, "UUID history logged", Toast.LENGTH_SHORT).show()
         }
     }
 }
