@@ -3,7 +3,7 @@
 ![Static Badge](https://img.shields.io/badge/Distribution-npm-orange)
 ![Target](https://img.shields.io/badge/Target-Android%20OS-357EC7)
 # UUID Snatcher Android Application
-▄︻デU̷U̷I̷D̷ ̷S̷N̷A̷T̷C̷H̷══━一
+
 ## Overview
 
 The **UUID Snatcher** is an Android application that scans for Wi-Fi Access Points (APs) containing "Juice" in their SSID, fetches a unique UUID from the AP, and emails it to the designated support address. It includes features like detailed AP information, QR code generation, background scanning, and enhanced error handling.
