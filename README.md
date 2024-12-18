@@ -1,9 +1,7 @@
 # **JuiceNet-Voltie Android**
 ## **The VoltiE UUID Snatcher for Android**
 
-![Static Badge](https://img.shields.io/badge/Author-Jgooch-1F4D37)  
-![Static Badge](https://img.shields.io/badge/Distribution-npm-orange)  
-![Target](https://img.shields.io/badge/Target-Android-3DDC84)  
+![Static Badge](https://img.shields.io/badge/Author-Jgooch-1F4D37)  ![Static Badge](https://img.shields.io/badge/Distribution-npm-orange)  ![Target](https://img.shields.io/badge/Target-Android-3DDC84)  
 
 ---
 
