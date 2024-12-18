@@ -2,7 +2,7 @@
 ![Static Badge](https://img.shields.io/badge/Author-Jgooch-1F4D37)
 ![Static Badge](https://img.shields.io/badge/Distribution-npm-orange)
 ![Target](https://img.shields.io/badge/Target-Android%20OS-357EC7)
-# UUID Snatcher Android Application
+# UUID Snatcher for Android
 
 ## Overview
 
