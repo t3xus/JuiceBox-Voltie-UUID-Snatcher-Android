@@ -14,6 +14,31 @@ Additionally, a companion **Build Android APK Script** automates the process of 
 
 ## Application Features
 
+
+- **Operating System Detection**:
+  Automatically detects the operating system (macOS, Ubuntu, Debian, or Red Hat) and adjusts commands for the environment.
+
+- **Dependency Management**:
+  Installs required tools such as `keytool`, `jarsigner`, `zipalign`, and `curl` if they are not already installed.
+
+- **Gradle Wrapper Support**:
+  Downloads the Gradle wrapper if it is missing from the project.
+
+- **Interactive Build Type Selection**:
+  Prompts users to select the build type (`release` or `debug`).
+
+- **Keystore Management**:
+  Automatically generates a keystore if one is not available.
+
+- **APK Signing and Alignment**:
+  Ensures the APK is signed and aligned for sideloading onto Android devices.
+
+- **Logging**:
+  Logs all build steps and errors to a timestamped log file for troubleshooting.
+
+- **Email Notifications**:
+  Sends an optional email notification with build results and logs attached.
+
 ### Wi-Fi Scanning
 - Lists all Wi-Fi APs containing "Juice" in their SSID.
 - Filters APs based on signal strength.
@@ -50,31 +75,6 @@ Additionally, a companion **Build Android APK Script** automates the process of 
 
 ---
 
-## Build Android APK Script Features
-
-- **Operating System Detection**:
-  Automatically detects the operating system (macOS, Ubuntu, Debian, or Red Hat) and adjusts commands for the environment.
-
-- **Dependency Management**:
-  Installs required tools such as `keytool`, `jarsigner`, `zipalign`, and `curl` if they are not already installed.
-
-- **Gradle Wrapper Support**:
-  Downloads the Gradle wrapper if it is missing from the project.
-
-- **Interactive Build Type Selection**:
-  Prompts users to select the build type (`release` or `debug`).
-
-- **Keystore Management**:
-  Automatically generates a keystore if one is not available.
-
-- **APK Signing and Alignment**:
-  Ensures the APK is signed and aligned for sideloading onto Android devices.
-
-- **Logging**:
-  Logs all build steps and errors to a timestamped log file for troubleshooting.
-
-- **Email Notifications**:
-  Sends an optional email notification with build results and logs attached.
 
 ---
 
