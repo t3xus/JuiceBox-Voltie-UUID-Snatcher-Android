@@ -2,11 +2,11 @@
 ![Static Badge](https://img.shields.io/badge/Author-Jgooch-1F4D37)
 ![Static Badge](https://img.shields.io/badge/Distribution-npm-orange)
 ![Target](https://img.shields.io/badge/Target-Android%20OS-357EC7)
-# Voltie UUID Snatcher Android Application
+# UUID Snatcher Android Application
 ▄︻デU̷U̷I̷D̷ ̷S̷N̷A̷T̷C̷H̷══━一
 ## Overview
 
-The **Voltie UUID Snatcher** is an Android application that scans for Wi-Fi Access Points (APs) containing "Juice" in their SSID, fetches a unique UUID from the AP, and emails it to the designated support address. It includes features like detailed AP information, QR code generation, background scanning, and enhanced error handling.
+The **UUID Snatcher** is an Android application that scans for Wi-Fi Access Points (APs) containing "Juice" in their SSID, fetches a unique UUID from the AP, and emails it to the designated support address. It includes features like detailed AP information, QR code generation, background scanning, and enhanced error handling.
 
 Additionally, a companion **Build Android APK Script** automates the process of building, signing, and aligning the APK for deployment.
 
