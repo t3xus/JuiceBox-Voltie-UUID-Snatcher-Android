@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Voltie UUID Snatcher</string>
+    <string name="available_aps">Available Access Points</string>
+</resources>
